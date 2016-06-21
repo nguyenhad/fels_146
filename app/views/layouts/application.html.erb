@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>BaseApp</title>
+  <title><%= full_title(yield(:title)) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+    <header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="container">
+    <%= link_to t("app_name"), '#', id: "logo" %>
+      <nav>
+          <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to "Home",   root_path %></li>
+            <li><%= link_to "Log in", '#' %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <%= yield %>
+      <nav>
+          <ul>
+            <li><%= link_to "About",   about_path %></li>
+            <li><%= link_to "Contact", contact_path %></li>
+          </ul>
+      </nav>
+    </div>
 </body>
 </html>

@@ -21,3 +21,14 @@
 
 en:
   hello: "Hello world"
+  home: "Home"
+  help:
+    name: "Help"
+  about:
+    name: "About"
+  contact:
+    name: "Contact"
+  base_title: "Framgia E-Learning"
+  app_name: "Framgia E-Learning"
+  greeting: "Welcome to Framgia E-Learning"
+  sign_up_first: "Sign up now!"

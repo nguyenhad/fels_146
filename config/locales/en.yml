@@ -33,4 +33,17 @@ en:
   app_name: "Framgia E-Learning"
   greeting: "Welcome to Framgia E-Learning"
   sign_up_first: "Sign up now!"
-  log_in: "Log in"
+  Log_in:
+    name: "Log in"
+    email: "Email"
+    password: "password"
+    log_in_button: "Login"
+    log_in_fail: "Email or password is invalid!"
+  Header:
+    home: "Home"
+    help: "Help"
+    account: "Account"
+    profile: "Profile"
+    settings: "Settings"
+    log_in: "Login"
+    log_out: "Logout"

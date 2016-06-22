@@ -1,0 +1,13 @@
+<% provide :title, t("show_user") %>
+
+<h1><%= t "show_user" %></h1>
+<%= will_paginate %>
+<ul class="users">
+  <% @users.each do |user| %>
+    <li>
+      <%= gravatar_for user %>
+      <%= link_to user.name, user %>
+    </li>
+  <% end %>
+</ul>
+<%= will_paginate %>

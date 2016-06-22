@@ -1,7 +1,10 @@
 class UsersController < ApplicationController
-    before_action :logged_in_user, only: [:index]
+  USERS_PER_PAGE = 10
+
+  before_action :logged_in_user, only: [:index]
+
   def index
-    @users = User.all
+    @users = User.paginate page: params[:page], per_page: USERS_PER_PAGE
   end
 
   def show
@@ -23,15 +26,8 @@ class UsersController < ApplicationController
   end
   private
 
-    def user_params
-      params.require(:user).permit :name, :email, :password,
+  def user_params
+    params.require(:user).permit :name, :email, :password,
                                     :password_confirmation
-    end
-
-    def logged_in_user
-      unless logged_in?
-        flash[:danger] = t "Log_in.log_in_warn"
-        redirect_to login_url
-      end
-    end
   end
+end

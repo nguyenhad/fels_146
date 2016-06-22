@@ -4,11 +4,17 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   private
-
   def logged_in_user
     unless logged_in?
-      flash[:danger] = t "flash.warning"
-      redirect_to login_url
+      flash[:warning] = t "log_in_require"
+      redirect_to root_url
+    end
+  end
+
+  def authorize_user
+    unless @user.is_user? current_user
+      flash[:danger] = t "no_permission"
+      redirect_to root_url
     end
   end
 end

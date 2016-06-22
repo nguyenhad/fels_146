@@ -61,9 +61,14 @@ en:
   create_button: "Create my account"
   password_confirmation: "Confirmation"
   error_mess: "error"
-
   show_user: "All users"
   Users:
     name: "User"
-
-
+  update_button: "Save changes"
+  update_profile: "Update your profile"
+  update_profile_title: "Update profile"
+  change_avatar_button: "Change"
+  form_contains_errors: "This form contains"
+  update_profile_success: "Update profile successfully!"
+  log_in_require: "You need log in first"
+  no_permission: "You don't have permission"

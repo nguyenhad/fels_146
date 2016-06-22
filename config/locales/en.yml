@@ -33,6 +33,7 @@ en:
   app_name: "Framgia E-Learning"
   greeting: "Welcome to Framgia E-Learning"
   sign_up_first: "Sign up now!"
+
   Log_in:
     name: "Log in"
     email: "Email"
@@ -47,3 +48,13 @@ en:
     settings: "Settings"
     log_in: "Login"
     log_out: "Logout"
+
+  log_in: "Log in"
+  user_name: "User name"
+  Sign_up:
+    name: "Sign up"
+  create: "Create account complete"
+  create_button: "Create my account"
+  password_confirmation: "Confirmation"
+  error_mess: "error"
+

@@ -18,7 +18,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new user_params
     if @user.save
-      flash[:info] = t "create"
+      flash[:success] = t "controllers.users.flash.success.signup"
       log_in @user
       redirect_to @user
     else
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update_attributes user_params
-      flash[:success] = t "update_profile_success"
+      flash[:success] = t "controllers.users.flash.success.update_profile"
       redirect_to @user
     else
       render :edit

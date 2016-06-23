@@ -1,6 +1,6 @@
-<% provide :title, t("show_user") %>
+<% provide :title, t("views.users.index.title") %>
 
-<h1><%= t "show_user" %></h1>
+<h1><%= t "views.users.index.content" %></h1>
 <%= will_paginate %>
 <ul class="users">
   <% @users.each do |user| %>

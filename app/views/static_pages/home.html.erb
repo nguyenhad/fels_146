@@ -1,6 +1,7 @@
-<% provide :title, t("Home.name") %>
+<% provide :title, t("views.pages.home.title") %>
 
 <div class="center jumbotron">
-  <h1><%= t "greeting" %></h1>
-  <%= link_to t("sign_up_first"), signup_path, class: "btn btn-lg btn-primary" %>
+  <h3><%= t "views.pages.home.greeting" %></h3>
+  <%= link_to t("views.pages.home.signup_invite"), signup_path,
+    class: "btn btn-lg btn-primary" %>
 </div>

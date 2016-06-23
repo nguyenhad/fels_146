@@ -20,55 +20,73 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
-  Home:
-    name: "Home"
-  Help:
-    name: "Help"
-  About:
-    name: "About"
-  Contact:
-    name: "Contact"
-  base_title: "Framgia E-Learning"
-  app_name: "Framgia E-Learning"
-  greeting: "Welcome to Framgia E-Learning"
-  sign_up_first: "Sign up now!"
-
-  Log_in:
-    name: "Log in"
-    email: "Email"
-    password: "password"
-    log_in_button: "Login"
-    log_in_fail: "Email or password is invalid!"
-
-  Header:
-    home: "Home"
-    help: "Help"
-    account: "Account"
-    profile: "Profile"
-    settings: "Settings"
-    log_in: "Login"
-    log_out: "Logout"
-
-  flash:
-    warning: "Please log in"
-
-  log_in: "Log in"
-  user_name: "User name"
-  Sign_up:
-    name: "Sign up"
-  create: "Create account complete"
-  create_button: "Create my account"
-  password_confirmation: "Confirmation"
-  error_mess: "error"
-  show_user: "All users"
-  Users:
-    name: "User"
-  update_button: "Save changes"
-  update_profile: "Update your profile"
-  update_profile_title: "Update profile"
-  change_avatar_button: "Change"
-  form_contains_errors: "This form contains"
-  update_profile_success: "Update profile successfully!"
-  log_in_require: "You need log in first"
-  no_permission: "You don't have permission"
+  controllers:
+    application:
+      flash:
+        warning:
+          login_require: "You need login first!"
+        danger:
+          no_permission: "You do not have permission!"
+    sessions:
+      flash:
+        danger:
+          login: "Email and password is not correct!"
+    users:
+      flash:
+        success:
+          signup: "Create account successfully"
+          update_profile: "Update profile successfully"
+  views:
+    application:
+      name: "Framgia E-Learning"
+      base_title: "Framgia E-Learning"
+    header:
+      app_name: "Framgia E-Learning"
+      home: "Home"
+      help: "Help"
+      all_users: "Users"
+      account: "Account"
+      profile: "Profile"
+      settings: "Settings"
+      logout: "Logout"
+      login: "Login"
+    footer:
+      about: "About"
+      contact: "Contact"
+    sessions:
+      new:
+        title: "Login"
+        content: "Login"
+        submit_button: "Login"
+    shared:
+      error_messages:
+        form_contains: "This form contains "
+    pages:
+      about:
+        title: "About"
+        content: "We are 146 team from Framgia Vietnam"
+      contact:
+        title: "Contact"
+        content: "Call me maybe"
+      help:
+        title: "Help"
+        content: "Help me"
+      home:
+        title: "Home"
+        greeting: "Welcome to Framgia E-Learning system"
+        signup_invite: "Sign up now!"
+    users:
+      edit:
+        title: "Update profile"
+        content: "Update your profile"
+        confirmation: "Confirmation"
+        submit_button: "Save changes"
+        change_avatar: "Change your avatar"
+      index:
+        title: "All users"
+        content: "Show all users"
+      new:
+        title: "Signup"
+        content: "Signup"
+        confirmation: "Confirmation"
+        submit_button: "Create your account"

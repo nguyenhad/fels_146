@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       log_in user
       redirect_to root_path
     else
-      flash.now[:danger] = t "Log_in.log_in_fail"
+      flash.now[:danger] = t "controllers.sessions.flash.danger.login"
       render :new
     end
   end

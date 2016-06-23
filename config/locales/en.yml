@@ -21,12 +21,20 @@
 
 en:
   controllers:
+    admin:
+      users:
+        flash:
+          success:
+            delete_user: "User has been deleted!"
+          fail:
+            delete_user: "Fail to delete user!"
     application:
       flash:
         warning:
           login_require: "You need login first!"
         danger:
           no_permission: "You do not have permission!"
+          invalid_user: "This user does not exist!"
     sessions:
       flash:
         danger:
@@ -42,6 +50,8 @@ en:
         index:
           title: "Users manager"
           content: "Users manager"
+          confirm_delete_user: "Do you want to delete this user?"
+          delete_button: "Delete"
     application:
       name: "Framgia E-Learning"
       base_title: "Framgia E-Learning"

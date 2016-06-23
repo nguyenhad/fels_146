@@ -20,7 +20,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:info] = t "create"
       log_in @user
-      redirect_to root_url
+      redirect_to @user
     else
       render :new
     end

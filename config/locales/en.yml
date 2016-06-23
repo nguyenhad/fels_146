@@ -37,6 +37,11 @@ en:
           signup: "Create account successfully"
           update_profile: "Update profile successfully"
   views:
+    admin:
+      users:
+        index:
+          title: "Users manager"
+          content: "Users manager"
     application:
       name: "Framgia E-Learning"
       base_title: "Framgia E-Learning"
@@ -45,6 +50,8 @@ en:
       home: "Home"
       help: "Help"
       all_users: "Users"
+      manager: "Manager"
+      users_manager: "Users manager"
       account: "Account"
       profile: "Profile"
       settings: "Settings"

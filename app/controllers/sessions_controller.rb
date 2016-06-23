@@ -22,16 +22,15 @@ class SessionsController < ApplicationController
   end
 
   private
-
-    def already_logged_in
-      if logged_in?
-        redirect_to root_path
-      end
+  def already_logged_in
+    if logged_in?
+      redirect_to root_path
     end
+  end
 
-    def not_logged_in
-      unless logged_in?
-        redirect_to root_path
-      end
+  def not_logged_in
+    unless logged_in?
+      redirect_to root_path
     end
+  end
 end

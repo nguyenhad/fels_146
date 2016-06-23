@@ -11,8 +11,16 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def load_user
+    @user = User.find_by id: params[:id]
+    unless @user
+      flash[:danger] = t "controllers.application.flash.danger.invalid_user"
+      redirect_to root_url
+    end
+  end
+
   def authorize_user
-    unless @user.is_user? current_user
+    unless current_user.is_user? @user
       flash[:danger] = t "controllers.application.flash.danger.no_permission"
       redirect_to root_url
     end

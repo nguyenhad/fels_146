@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
-  has_many :activites, dependent: :destroy
+  has_many :activities, dependent: :destroy
   has_many :lessons, dependent: :destroy
   has_many :active_relationships, class_name:  Relationship.name,
                                    foreign_key: :follower_id,

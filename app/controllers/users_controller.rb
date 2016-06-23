@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  before_action :logged_in_user, only: [:index, :edit, :update]
+  before_action :logged_in_user
   before_action :load_user, only: [:show, :edit, :update]
   before_action :authorize_user, only: [:edit, :update]
 

@@ -78,6 +78,9 @@ en:
     shared:
       error_messages:
         form_contains: "This form contains "
+      stat:
+        following: "following"
+        followers: "followers"
     pages:
       about:
         title: "About"
@@ -107,3 +110,16 @@ en:
         content: "Signup"
         confirmation: "Confirmation"
         submit_button: "Create your account"
+      follow:
+        submit:
+          follow: "Follow"
+          unfollow: "Unfollow"
+    followings:
+      index:
+        title: "Followings users"
+        stats: "This user is following %{number} people."
+    followers:
+      index:
+        title: "Followers users"
+        stats: "This user is followed by %{number} people."
+

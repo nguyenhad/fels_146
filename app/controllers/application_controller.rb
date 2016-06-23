@@ -17,4 +17,11 @@ class ApplicationController < ActionController::Base
       redirect_to root_url
     end
   end
+
+  def authorize_admin
+    unless current_user.is_admin?
+      flash[:danger] = t "controllers.application.flash.danger.no_permission"
+      redirect_to root_url
+    end
+  end
 end

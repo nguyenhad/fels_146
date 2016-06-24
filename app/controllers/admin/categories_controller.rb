@@ -1,6 +1,11 @@
 class Admin::CategoriesController < ApplicationController
   before_action :logged_in_user, :authorize_admin
-  before_action :load_category, only: [:edit, :update]
+  before_action :load_category, only: [:edit, :update, :destroy]
+
+  def index
+    @categories = Category.order(:created_at).paginate page: params[:page],
+      per_page: Settings.categories_per_page
+  end
 
   def new
     @category = Category.new
@@ -10,7 +15,7 @@ class Admin::CategoriesController < ApplicationController
     @category = Category.new category_params
     if @category.save
       flash[:success] = t "controllers.admin.categories.flash.success.create_category"
-      redirect_to root_url
+      redirect_to admin_categories_path
     else
       render :new
     end
@@ -26,6 +31,12 @@ class Admin::CategoriesController < ApplicationController
     else
       render :edit
     end
+  end
+
+  def destroy
+    @category.destroy
+    flash[:success] = t "controllers.admin.categories.flash.success.delete_category"
+    redirect_to admin_categories_path
   end
 
   private

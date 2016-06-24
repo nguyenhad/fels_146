@@ -205,3 +205,13 @@ aside {
 .users.follow {
   padding: 0;
 }
+
+.categories {
+  list-style: right;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 20px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}

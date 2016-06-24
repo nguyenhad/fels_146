@@ -33,6 +33,7 @@ en:
           success:
             create_category: "Category has been created"
             edit_category: "Category has been updated"
+            delete_category: "Category deleted"
     application:
       flash:
         warning:
@@ -67,6 +68,12 @@ en:
           title: "Update category"
           content: "Update category"
           submit_button: "Save change"
+        index:
+          title: "All categories"
+          content: "Categories manager"
+          delete: "Delete"
+          confirm: "You sure"
+          edit: "Edit"
     application:
       name: "Framgia E-Learning"
       base_title: "Framgia E-Learning"

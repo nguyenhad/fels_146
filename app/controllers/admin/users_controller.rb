@@ -3,7 +3,8 @@ class Admin::UsersController < ApplicationController
   before_action :load_user, only: :destroy
 
   def index
-    @users = User.paginate page: params[:page], per_page: Settings.users_per_page
+    @users = User.order(:created_at).paginate page: params[:page],
+      per_page: Settings.users_per_page
   end
 
   def destroy

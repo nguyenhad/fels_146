@@ -14,14 +14,14 @@ Rails.application.routes.draw do
 
   resources :users do
     member do
-      resources :followings, only: [:index]
-      resources :followers, only: [:index]
+      resources :followings, only: :index
+      resources :followers, only: :index
     end
   end
 
   namespace :admin do
     resources :users, only: [:index, :destroy]
-    resources :categories, only: [:new, :create]
+    resources :categories
   end
 
   resources :relationships, only: [:create, :destroy]

@@ -32,6 +32,7 @@ en:
         flash:
           success:
             create_category: "Category has been created"
+            edit_category: "Category has been updated"
     application:
       flash:
         warning:
@@ -39,6 +40,7 @@ en:
         danger:
           no_permission: "You do not have permission!"
           invalid_user: "This user does not exist!"
+          invalid_category: "This category does not exist"
     sessions:
       flash:
         danger:
@@ -61,6 +63,10 @@ en:
           title: "New category"
           content: "Create new category"
           submit_button: "Create new category"
+        edit:
+          title: "Update category"
+          content: "Update category"
+          submit_button: "Save change"
     application:
       name: "Framgia E-Learning"
       base_title: "Framgia E-Learning"

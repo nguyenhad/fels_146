@@ -1,0 +1,17 @@
+<li>
+  <span class="content">
+    <% case activity.action_type %>
+    <% when Activity.actions[:follow] %>
+      <%= t "views.activities.activity.follow_action" %>
+      <%= link_to t("views.activities.activity.target_user"),
+        user_path(activity.target_id) %>
+    <% when Activity.actions[:unfollow] %>
+      <%= t "views.activities.activity.unfollow_action" %>
+      <%= link_to t("views.activities.activity.target_user"),
+        user_path(activity.target_id) %>
+    <% end %>
+  </span>
+  <span class="timestamp">
+    <%= activity.created_at %>
+  </span>
+</li>

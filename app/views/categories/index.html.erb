@@ -1,0 +1,14 @@
+<% provide :title, t("views.categories.index.title") %>
+
+<h1><%= t "views.categories.index.content" %></h1>
+<%= will_paginate %>
+<ul class="categories">
+  <% @categories.each do |category| %>
+    <li>
+      <%= link_to category.name, categories_path %>
+      <%= link_to t("views.categories.index.start_lesson"), "#",
+        class: "btn btn-primary pull-right" %>
+    </li>
+  <% end %>
+</ul>
+<%= will_paginate %>

@@ -83,6 +83,7 @@ en:
       settings: "Settings"
       logout: "Logout"
       login: "Login"
+      categories: "Categories"
     footer:
       about: "About"
       contact: "Contact"
@@ -138,4 +139,11 @@ en:
       index:
         title: "Followers users"
         stats: "This user is followed by %{number} people."
-
+    categories:
+      index:
+        title: "All categories"
+        content: "Show all categories"
+        start_lesson: "Start lesson"
+        show_word: "Show word"
+      show:
+        title: "Show categories"

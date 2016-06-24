@@ -1,0 +1,9 @@
+<%= provide :title, t("views.followers.index.title") %>
+<h4>
+  <%= t "views.followers.index.stats", number: @users.count %>
+<h4>
+<%= will_paginate @users %>
+<ul class="users">
+  <%= render @users %>
+</ul>
+<%= will_paginate @users %>

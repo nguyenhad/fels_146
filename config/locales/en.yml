@@ -20,6 +20,11 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  models:
+    word:
+      errors:
+        required_answer: "must have at least an answer"
+        correct_answer: "must have only correct answer"
   controllers:
     admin:
       users:
@@ -36,6 +41,10 @@ en:
             delete_category: "Category deleted"
           danger:
             delete_categoy: "Lesson exist, can't delete"
+      words:
+        flash:
+          success:
+            create_word: "New word has been created"
     application:
       flash:
         warning:
@@ -70,7 +79,7 @@ en:
           delete_button: "Delete"
       categories:
         new:
-          title: "New category"
+          title: "Add category"
           content: "Create new category"
           submit_button: "Create new category"
         edit:
@@ -78,12 +87,22 @@ en:
           content: "Update category"
           submit_button: "Save change"
         index:
-          title: "All categories"
+          title: "Categories manager"
           content: "Categories manager"
           delete: "Delete"
           confirm: "You sure"
           constant: "Exist lesson, can't delete"
           edit: "Edit"
+          add_word: "Add word"
+      words:
+        new:
+          title: "Add word"
+          content: "Add new word"
+          submit_button: "Add new word"
+          add_more_answer: "Add an answer"
+          answers: "Answers"
+        answer_fields:
+          remove_button: "remove"
     application:
       name: "Framgia E-Learning"
       base_title: "Framgia E-Learning"
@@ -93,8 +112,8 @@ en:
       help: "Help"
       all_users: "Users"
       manager: "Manager"
-      users_manager: "Users manager"
-      categories_manager: "Categories manager"
+      users_manager: "Users"
+      categories_manager: "Categories"
       account: "Account"
       profile: "Profile"
       settings: "Settings"

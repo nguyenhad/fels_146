@@ -5,14 +5,18 @@
   <% @categories.each do |category| %>
     <li>
       <%= link_to category.name, categories_path %>
-      <%= link_to t("views.admin.categories.index.edit"),
-        edit_admin_category_path(category), class: "btn btn-warning" %>
-      <% unless category.lessons.any? %>
+      <span class="action-button">
+        <%= link_to t("views.admin.categories.index.add_word"),
+          new_admin_word_path(category_id: category.id),
+          class: "btn btn-primary" %>
+        <%= link_to t("views.admin.categories.index.edit"),
+          edit_admin_category_path(category), class: "btn btn-warning" %>
+
         <%= link_to t("views.admin.categories.index.delete"),
           admin_category_path(category), method: :delete,
           data: {confirm: t("views.admin.categories.index.confirm")},
           class: "btn btn-danger"%>
-      <% end %>
+      </span>
     </li>
   <% end %>
 </ul>

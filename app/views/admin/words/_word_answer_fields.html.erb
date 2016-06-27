@@ -1,0 +1,14 @@
+<fieldset class="answer_field">
+  <span class="answer_content">
+    <%= f.text_field :content, class: "form-control" %>
+  </span>
+  <span class="is_correct_answer">
+    <%= f.label :is_correct %>
+    <%= f.check_box :is_correct, class: "check_correct_answer" %>
+  </span>
+  <span class="remove_answer">
+    <%= link_to t("views.admin.words.answer_fields.remove_button"),
+      "#", class: "remove_fields" %>
+  </span>
+  <%= f.hidden_field :_destroy, class: "destroy_tag" %>
+</fieldset>

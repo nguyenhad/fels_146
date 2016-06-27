@@ -213,6 +213,9 @@ aside {
     overflow: auto;
     padding: 20px 0;
     border-bottom: 1px solid $gray-lighter;
+    .action-button{
+      float: right;
+    }
   }
 }
 
@@ -232,4 +235,17 @@ aside {
       color: $gray-light;
     }
   }
+}
+
+fieldset {
+  text-align: center;
+  .answer_content{
+    float: left;
+    width: 350px;
+  }
+  .is_correct_answer{
+    float: left;
+  }
+  .remove_answer{
+    float: right;  }
 }

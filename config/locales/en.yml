@@ -51,7 +51,14 @@ en:
         success:
           signup: "Create account successfully"
           update_profile: "Update profile successfully"
+      follow_action: "Follow"
+      unfollow_action: "Unfollow"
   views:
+    activities:
+      activity:
+        follow_action: "Followed"
+        unfollow_action: "Unfollowed"
+        target_user: "a user"
     admin:
       users:
         index:
@@ -138,6 +145,8 @@ en:
         submit:
           follow: "Follow"
           unfollow: "Unfollow"
+      show:
+        activities_history: "Activities history"
     followings:
       index:
         title: "Followings users"

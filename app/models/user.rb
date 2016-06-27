@@ -36,4 +36,8 @@ class User < ActiveRecord::Base
   def following? other_user
     following.include? other_user
   end
+
+  def store_action action_type, target_id
+    self.activities.build(action_type: action_type, target_id: target_id).save
+  end
 end

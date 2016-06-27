@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @activities = @user.activities.limit Settings.activities_on_profile
   end
 
   def new

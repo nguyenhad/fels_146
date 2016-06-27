@@ -7,10 +7,12 @@
       <%= link_to category.name, categories_path %>
       <%= link_to t("views.admin.categories.index.edit"),
         edit_admin_category_path(category), class: "btn btn-warning" %>
-      <%= link_to t("views.admin.categories.index.delete"),
-        admin_category_path(category), method: :delete,
-        data: {confirm: t("views.admin.categories.index.confirm")},
-        class: "btn btn-danger"%>
+      <% unless category.lessons.any? %>
+        <%= link_to t("views.admin.categories.index.delete"),
+          admin_category_path(category), method: :delete,
+          data: {confirm: t("views.admin.categories.index.confirm")},
+          class: "btn btn-danger"%>
+      <% end %>
     </li>
   <% end %>
 </ul>

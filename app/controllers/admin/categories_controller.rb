@@ -1,6 +1,7 @@
 class Admin::CategoriesController < ApplicationController
   before_action :logged_in_user, :authorize_admin
   before_action :load_category, only: [:edit, :update, :destroy]
+  before_action :check_exist_lesson, only: :destroy
 
   def index
     @categories = Category.order(:created_at).paginate page: params[:page],
@@ -27,7 +28,7 @@ class Admin::CategoriesController < ApplicationController
   def update
     if @category.update_attributes category_params
       flash[:success] = t "controllers.admin.categories.flash.success.edit_category"
-      redirect_to root_url
+      redirect_to admin_categories_path
     else
       render :edit
     end
@@ -37,6 +38,13 @@ class Admin::CategoriesController < ApplicationController
     @category.destroy
     flash[:success] = t "controllers.admin.categories.flash.success.delete_category"
     redirect_to admin_categories_path
+  end
+
+  def check_exist_lesson
+    if @category.lessons.any?
+      flash[:danger] = t "controllers.admin.categories.flash.danger.delete_category"
+      redirect_to admin_categories_path
+    end
   end
 
   private

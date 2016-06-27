@@ -34,6 +34,8 @@ en:
             create_category: "Category has been created"
             edit_category: "Category has been updated"
             delete_category: "Category deleted"
+          danger:
+            delete_categoy: "Lesson exist, can't delete"
     application:
       flash:
         warning:
@@ -80,6 +82,7 @@ en:
           content: "Categories manager"
           delete: "Delete"
           confirm: "You sure"
+          constant: "Exist lesson, can't delete"
           edit: "Edit"
     application:
       name: "Framgia E-Learning"

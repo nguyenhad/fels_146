@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users, only: [:index, :destroy]
     resources :categories
+    resources :words, only: [:new, :create]
   end
 
   resources :relationships, only: [:create, :destroy]

@@ -76,8 +76,16 @@ en:
       flash:
         success:
           create_lesson: "New lesson has been created"
+          finish: "Finish lesson successfully"
         danger:
           create_lesson: "Fail to create lesson"
+          invalid_lesson: "Invalid lesson"
+          finish: "Fail to finish lesson"
+          require_finish: "You need to finish this lesson first"
+          no_permission: "You don't have permission"
+        info:
+          finished: "You have finished this lesson"
+
   views:
     activities:
       activity:
@@ -208,3 +216,14 @@ en:
         show_word: "Show word"
       show:
         title: "Show categories"
+    lessons:
+      edit:
+        title: "Do lesson"
+        content: "Do lesson"
+        exam_date: "Exam Date:"
+        submit_button: "Finish"
+      show:
+        title: "Review lesson"
+        content: "Review lesson"
+        exam_date: "Exam Date:"
+        exam_result: "Exam Result:"

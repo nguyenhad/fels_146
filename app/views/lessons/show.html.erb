@@ -1,0 +1,18 @@
+<% provide :title, t("views.lessons.show.content") %>
+<div class="exam_info">
+  <%= t "view.lessons.show.exam_date" %>:
+  <%= @lesson.created_at %>
+  <br>
+  <%= t "view.lessons.show.exam_result" %>:
+  <span class="exam_result">
+    <%= @lesson.count_correct_answers.to_s + "/" + @lesson.lesson_words.count.to_s %>
+  </span>
+</div>
+<h1><%= t "views.lessons.show.content" %></h1>
+<%= form_for @lesson do |f| %>
+  <ol>
+    <%= f.fields_for :lesson_words do |builder| %>
+      <%= render "lesson_words", f: builder %>
+    <% end %>
+  </ol>
+<% end %>

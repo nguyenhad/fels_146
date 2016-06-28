@@ -249,3 +249,24 @@ fieldset {
   .remove_answer{
     float: right;  }
 }
+
+.word_answer{
+  input{
+    width: 50px;
+  }
+}
+
+.action-finish-lesson{
+  input{
+    width: 100px;
+  }
+  text-align: center;
+}
+
+.exam_info{
+  margin-top: 50px;
+  .exam_result{
+    font-size: 25px;
+    color: red;
+  }
+}

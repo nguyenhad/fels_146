@@ -1,0 +1,11 @@
+<li><%= f.label f.object.word.name %></li>
+<br>
+<% f.object.word.word_answers.each do |answer| %>
+  <span class="word_answer">
+    <%= f.radio_button :word_answer_id, answer.id,
+      disabled: f.object.lesson.is_completed? %>
+    <%= answer.content %>
+  </span>
+  <br>
+<% end %>
+<br>

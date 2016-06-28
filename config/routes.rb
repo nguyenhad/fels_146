@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
   resources :relationships, only: [:create, :destroy]
 
-  resources :lessons, only: :create
+  resources :lessons, only: [:create, :edit, :update, :show]
 
   resources :words, only: :index
 end

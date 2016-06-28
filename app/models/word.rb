@@ -16,7 +16,9 @@ class Word < ActiveRecord::Base
     else
       count_correct_answers = 0
       self.word_answers.each do |answer|
-        count_correct_answers += 1 if answer.is_correct?
+        unless answer.marked_for_destruction?
+          count_correct_answers += 1 if answer.is_correct?
+        end
       end
       if count_correct_answers != 1
         self.errors.add :word, I18n.t("models.word.errors.correct_answer")

@@ -53,6 +53,7 @@ en:
           no_permission: "You do not have permission!"
           invalid_user: "This user does not exist!"
           invalid_category: "This category does not exist"
+          invalid_word: "This word does not exist"
     sessions:
       flash:
         danger:
@@ -100,7 +101,11 @@ en:
           content: "Add new word"
           submit_button: "Add new word"
           add_more_answer: "Add an answer"
-          answers: "Answers"
+        edit:
+          title: "Edit word"
+          content: "Edit word"
+          submit_button: "Save changes"
+          add_more_answer: "Add an answer"
         answer_fields:
           remove_button: "remove"
     application:

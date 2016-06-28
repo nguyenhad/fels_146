@@ -1,5 +1,5 @@
-<% provide :title, t("views.admin.words.new.title") %>
-<h1><%= t "views.admin.words.new.content" %></h1>
+<% provide :title, t("views.admin.words.edit.title") %>
+<h1><%= t "views.admin.words.edit.content" %></h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -14,10 +14,10 @@
         <%= render "word_answer_fields", f: builder %>
       <% end %>
 
-      <%= link_to_add_word_answers t("views.admin.words.new.add_more_answer"),
+      <%= link_to_add_word_answers t("views.admin.words.edit.add_more_answer"),
         f, :word_answers %>
       <div class="action">
-        <%= f.submit t("views.admin.words.new.submit_button"),
+        <%= f.submit t("views.admin.words.edit.submit_button"),
           class: "btn btn-primary" %>
       </div>
     <% end %>

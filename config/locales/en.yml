@@ -44,7 +44,11 @@ en:
       words:
         flash:
           success:
-            create_word: "New word has been created"
+            create_word: "Word has been created"
+            delete_word: "Word and and answers has been deleted"
+          danger:
+            load_word: ""
+            delete_word: "This word has been exist in lesson, can't delete this word!"
     application:
       flash:
         warning:
@@ -108,6 +112,11 @@ en:
           add_more_answer: "Add an answer"
         answer_fields:
           remove_button: "remove"
+        index:
+          title: "Words"
+          content: "Words manager"
+          delete: "Delete"
+          confirm: "You sure"
     application:
       name: "Framgia E-Learning"
       base_title: "Framgia E-Learning"

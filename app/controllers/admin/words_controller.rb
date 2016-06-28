@@ -2,7 +2,7 @@ class Admin::WordsController < ApplicationController
   before_action :logged_in_user, :authorize_admin
   before_action :load_category, only: :new
   before_action :load_word, only: [:edit, :update]
-
+  before_action :check_lesson_words, only: :destroy
   def new
     @word = @category.words.build
   end
@@ -30,7 +30,20 @@ class Admin::WordsController < ApplicationController
     end
   end
 
+  def destroy
+    @word.destroy
+    flash[:success] = t "controllers.admin.words.flash.success.delete_word"
+    redirect_to admin_words_path
+  end
+
   private
+  def check_lesson_words
+    if @word.lesson_words.any?
+      flash[:danger] = t "controllers.admin.words.flash.danger.delete_word"
+      redirect_to admin_words_path
+    end
+  end
+
   def load_category
     @category = Category.find_by id: params[:category_id]
     unless @category

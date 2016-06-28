@@ -5,8 +5,10 @@
   <% @categories.each do |category| %>
     <li>
       <%= link_to category.name, categories_path %>
-      <%= link_to t("views.categories.index.start_lesson"), "#",
-        class: "btn btn-primary pull-right" %>
+      <span><%= category.words.count %></span>
+      <%= link_to t("views.categories.index.start_lesson"),
+        lessons_path(category_id: category.id),
+        method: :post, class: "btn btn-primary pull-right" %>
     </li>
   <% end %>
 </ul>

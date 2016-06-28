@@ -20,10 +20,12 @@ Rails.application.routes.draw do
   end
 
   resources :categories, only: :index
+  resources :words, only: :index
 
   namespace :admin do
     resources :users, only: [:index, :destroy]
     resources :categories
+    resources :words
   end
 
   resources :relationships, only: [:create, :destroy]

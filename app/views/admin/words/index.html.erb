@@ -1,0 +1,16 @@
+<% provide :title, t("views.admin.words.index.title") %>
+<h1><%= t "views.admin.words.index.content" %></h1>
+<%= will_paginate %>
+<ul class="words">
+  <% @words.each do |word| %>
+    <li>
+      <%= link_to word.name, words_path %>
+      <% unless word.lesson_words.any? %>
+        <%= link_to t("views.admin.words.index.delete"),
+          admin_word_path(word), method: :delete,
+          data: {confirm: t("views.admin.words.index.confirm")},
+          class: "btn btn-danger"%>
+    </li>
+  <% end %>
+</ul>
+<%= will_paginate %>

@@ -35,7 +35,15 @@ en:
             edit_category: "Category has been updated"
             delete_category: "Category deleted"
           danger:
-            delete_categoy: "Lesson exist, can't delete"
+            delete_category: "Lesson exist, can't delete"
+      words:
+        flash:
+          success:
+            create_word: "Word has been created"
+            delete_word: "Word and and answers has been deleted"
+          danger:
+            load_word: ""
+            delete_word: "This word has been exist in lesson, can;t delete"
     application:
       flash:
         warning:
@@ -44,6 +52,7 @@ en:
           no_permission: "You do not have permission!"
           invalid_user: "This user does not exist!"
           invalid_category: "This category does not exist"
+          invalid_word: "This word does not exist"
     sessions:
       flash:
         danger:
@@ -84,6 +93,12 @@ en:
           confirm: "You sure"
           constant: "Exist lesson, can't delete"
           edit: "Edit"
+      words:
+        index:
+          title: "Words"
+          content: "Words manager"
+          delete: "Delete"
+          confirm: "You sure"
     application:
       name: "Framgia E-Learning"
       base_title: "Framgia E-Learning"

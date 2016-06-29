@@ -3,9 +3,10 @@ class Word < ActiveRecord::Base
   has_many :lesson_words, dependent: :destroy
   belongs_to :category
 
-  validates :name, presence: true, length: {maximum: 50},
-    uniqueness: {case_sensitive: false}
+  scope :random, -> {order "RANDOM()"}
+  scope :in_category, -> (category) {where category_id: category.id}
 
+  validates :name, presence: true, length: {maximum: 50}
   validate :check_answers
 
   accepts_nested_attributes_for :word_answers, allow_destroy: true,

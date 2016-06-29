@@ -25,6 +25,9 @@ en:
       errors:
         required_answer: "must have at least an answer"
         correct_answer: "must have only correct answer"
+    lesson:
+      errors:
+        category_not_satisfy: "is not satisfy"
   controllers:
     admin:
       users:
@@ -69,6 +72,12 @@ en:
           update_profile: "Update profile successfully"
       follow_action: "Follow"
       unfollow_action: "Unfollow"
+    lessons:
+      flash:
+        success:
+          create_lesson: "New lesson has been created"
+        danger:
+          create_lesson: "Fail to create lesson"
   views:
     activities:
       activity:

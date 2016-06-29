@@ -28,4 +28,8 @@ Rails.application.routes.draw do
   end
 
   resources :relationships, only: [:create, :destroy]
+
+  resources :lessons, only: :create
+
+  resources :words, only: :index
 end

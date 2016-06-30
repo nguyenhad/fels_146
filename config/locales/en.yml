@@ -99,6 +99,10 @@ en:
           content: "Users manager"
           confirm_delete_user: "Do you want to delete this user?"
           delete_button: "Delete"
+          header_user_id: "User ID"
+          header_user_name: "User name"
+          header_email: "Email"
+          header_action: "Action"
       categories:
         new:
           title: "Add category"
@@ -116,6 +120,11 @@ en:
           constant: "Exist lesson, can't delete"
           edit: "Edit"
           add_word: "Add word"
+          header_category_id: "Word ID"
+          header_category_name: "Word"
+          header_total_words: "Total words"
+          header_action: "Action"
+          add_category: "Add new category"
       words:
         new:
           title: "Add word"
@@ -130,10 +139,16 @@ en:
         answer_fields:
           remove_button: "remove"
         index:
-          title: "Words"
+          title: "Words manager"
           content: "Words manager"
           delete: "Delete"
-          confirm: "You sure"
+          confirm: "Are you sure to delete this word?"
+          header_word_id: "Word ID"
+          header_word_name: "Word"
+          header_action: "Action"
+          option_all: "All category"
+          category: "Category"
+          filter_button: "Filter"
     application:
       name: "Framgia E-Learning"
       base_title: "Framgia E-Learning"
@@ -142,15 +157,19 @@ en:
       home: "Home"
       help: "Help"
       all_users: "Users"
+      learning: "Learning"
+      lesson: "Lessons"
       manager: "Manager"
       users_manager: "Users"
       categories_manager: "Categories"
+      words_manager: "Words"
       account: "Account"
       profile: "Profile"
       settings: "Settings"
       logout: "Logout"
       login: "Login"
       categories: "Categories"
+      words: "Words"
     footer:
       about: "About"
       contact: "Contact"

@@ -7,7 +7,7 @@
         <li><%= link_to t("views.header.help"), help_path %></li>
         <% if logged_in? %>
           <li><%= link_to t("views.header.all_users"), users_path %></li>
-          <li><%= link_to t("views.header.categories"), categories_path %></li>
+          <%= render "layouts/learning_menu" %>
           <% if current_user.is_admin? %>
             <%= render "layouts/manager_menu" %>
           <% end %>

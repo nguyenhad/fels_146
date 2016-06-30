@@ -4,6 +4,12 @@ class Admin::WordsController < ApplicationController
   before_action :load_word, only: [:edit, :update]
   before_action :check_lesson_words, only: :destroy
 
+  def index
+    @categories = Category.all
+    @words = Word.in_category(params[:category]).paginate page: params[:page],
+      per_page: Settings.words_per_page
+  end
+
   def new
     @word = @category.words.build
   end

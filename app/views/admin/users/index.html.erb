@@ -1,18 +1,35 @@
 <% provide :title, t("views.admin.users.index.title") %>
 <h1><%= t "views.admin.users.index.content" %></h1>
-<%= will_paginate %>
-<ul class="users">
-  <% @users.each do |user| %>
-    <li>
-      <%= gravatar_for user %>
-      <%= link_to user.name, user %>
-      <% unless user.is_admin? %>
+<table class="table table-striped manager-users">
+  <thead>
+    <col width="10%">
+    <col width="40%">
+    <col width="40%">
+    <col width="10%">
+    <tr>
+      <th><%= t "views.admin.users.index.header_user_id" %></th>
+      <th><%= t "views.admin.users.index.header_user_name" %></th>
+      <th><%= t "views.admin.users.index.header_email" %></th>
+      <th><%= t "views.admin.users.index.header_action" %></td>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td class="user-id"><%= user.id %></td>
+        <td class="user-name">
+          <%= link_to user.name, user, class: ("admin-name" if user.is_admin?) %>
+        </td>
+        <td class="user-email"><%= user.email %></td>
+        <td class="action">
           <%= link_to t("views.admin.users.index.delete_button"),
             admin_user_path(user.id),
-            class: "btn btn-danger pull-right", method: :delete,
-            data: {confirm: t("views.admin.users.index.confirm_delete_user")} %>
-      <% end %>
-    </li>
-  <% end %>
-</ul>
+            class: "btn btn-danger", method: :delete,
+            data: {confirm: t("views.admin.users.index.confirm_delete_user")},
+            disabled: user.is_admin? %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 <%= will_paginate %>

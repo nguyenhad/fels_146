@@ -21,8 +21,9 @@ class Word < ActiveRecord::Base
   belongs_to :category
 
   scope :random, -> {order "RANDOM()"}
-  scope :in_category, -> (category) {where category_id: category.id}
-
+  scope :in_category, -> category_id do
+    where category_id: category_id if category_id.present?
+  end
   validates :name, presence: true, length: {maximum: 50}
   validate :check_answers
 

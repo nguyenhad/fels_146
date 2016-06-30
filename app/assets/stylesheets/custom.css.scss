@@ -23,10 +23,6 @@ section {
   overflow: auto;
 }
 
-textarea {
- resize: vertical;
-}
-
 .center {
   text-align: center;
 }
@@ -46,13 +42,6 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: center;
-}
-
-h2 {
-  letter-spacing: -1px;
-  margin-bottom: 30px;
-  font-weight: normal;
-  color: #777;
 }
 
 p {
@@ -268,6 +257,7 @@ fieldset {
     color: red;
   }
 }
+
 .filter_word{
   .filter_word_status{
     input{
@@ -293,9 +283,53 @@ fieldset {
   }
 }
 
-/* show words and filter */
-.status-option-filter{
-  .status-option{
 
+/* Words manager */
+.word_filter_form{
+  .form-inline{
+    input{
+      width: 100px;
+    }
+    select{
+      width: 300px;
+      margin: 0;
+    }
+  }
+}
+
+.manager-users{
+  tbody{
+    tr{
+      .word-id{
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+/* Categories manager */
+.manager-categories{
+  tbody{
+    tr{
+      .category-id{
+        padding-left: 20px;
+      }
+    }
+  }
+}
+
+/* Users manager */
+.manager-users{
+  tbody{
+    tr{
+      .user-id{
+        padding-left: 20px;
+      }
+      .user-name{
+        .admin-name{
+          color: red;
+        }
+      }
+    }
   }
 }

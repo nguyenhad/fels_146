@@ -3,6 +3,7 @@ class Admin::WordsController < ApplicationController
   before_action :load_category, only: :new
   before_action :load_word, only: [:edit, :update]
   before_action :check_lesson_words, only: :destroy
+
   def new
     @word = @category.words.build
   end

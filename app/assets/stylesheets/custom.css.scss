@@ -108,7 +108,6 @@ footer {
 
 input, textarea, select, .uneditable-input {
   border: 1px solid #bbb;
-  width: 100%;
   margin-bottom: 15px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -218,7 +217,6 @@ aside {
     }
   }
 }
-
 .activities {
   list-style: left;
   margin: 1px;
@@ -268,5 +266,36 @@ fieldset {
   .exam_result{
     font-size: 25px;
     color: red;
+  }
+}
+.filter_word{
+  .filter_word_status{
+    input{
+      width: 5%;
+    }
+    label{
+      width: 50%;
+    }
+  }
+  .filter_category{
+    label{
+      width: 20%;
+    }
+    select{
+      width: 60%;
+    }
+  }
+  .action{
+    text-align: center;
+    input{
+      width: 100px;
+    }
+  }
+}
+
+/* show words and filter */
+.status-option-filter{
+  .status-option{
+
   }
 }

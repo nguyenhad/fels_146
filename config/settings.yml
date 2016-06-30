@@ -3,3 +3,10 @@ categories_per_page: 5
 activities_on_profile: 10
 questions_in_lesson: 3
 minimum_words: 3
+filter_options:
+  - "learnt"
+  - "true_learnt"
+  - "wrong_learnt"
+  - "not_yet"
+  - "all_words"
+words_per_page: 5

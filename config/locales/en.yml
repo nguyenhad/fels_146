@@ -227,3 +227,9 @@ en:
         content: "Review lesson"
         exam_date: "Exam Date:"
         exam_result: "Exam Result:"
+    words:
+      index:
+        title: "Show words"
+        content: "Words"
+        submit_filter: "Filter"
+        table_head: "Word"

@@ -3,10 +3,19 @@ class Lesson < ActiveRecord::Base
   belongs_to :category
   belongs_to :user
 
-  before_save :assign_words
+  before_create :assign_words
 
   validates :category, presence: true
   validate :check_words_category
+
+  accepts_nested_attributes_for :lesson_words,
+    reject_if: proc {|attributes| attributes[:word_answer_id].blank?}
+
+  def count_correct_answers
+    if self.is_completed?
+      LessonWord.correct.in_lesson(self).count
+    end
+  end
 
   private
   def assign_words

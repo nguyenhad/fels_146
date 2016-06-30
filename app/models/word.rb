@@ -12,6 +12,7 @@ class Word < ActiveRecord::Base
   accepts_nested_attributes_for :word_answers, allow_destroy: true,
     reject_if: proc {|attributes| attributes[:content].blank?}
 
+  private
   def check_answers
     if self.word_answers.empty?
       self.errors.add :word, I18n.t("models.word.errors.required_answer")

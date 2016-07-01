@@ -19,7 +19,7 @@ class Lesson < ActiveRecord::Base
 
   private
   def assign_words
-    Word.in_category(self.category).random.limit(Settings.questions_in_lesson)
+    Word.in_category(self.category.id).random.limit(Settings.questions_in_lesson)
       .each do |word|
       self.lesson_words.build word_id: word.id
     end

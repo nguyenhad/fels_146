@@ -1,16 +1,43 @@
 <% provide :title, t("views.admin.words.index.title") %>
 <h1><%= t "views.admin.words.index.content" %></h1>
-<%= will_paginate %>
-<ul class="words">
-  <% @words.each do |word| %>
-    <li>
-      <%= link_to word.name, words_path %>
-      <% unless word.lesson_words.any? %>
-        <%= link_to t("views.admin.words.index.delete"),
-          admin_word_path(word), method: :delete,
-          data: {confirm: t("views.admin.words.index.confirm")},
-          class: "btn btn-danger"%>
-    </li>
+<div class="word_filter_form">
+  <%= form_tag "", method: :get, class: "form-inline" do %>
+    <%= label_tag t("views.admin.words.index.category") %>
+    <%= select_tag :category,
+      options_for_select(@categories.collect {|category| [category.name, category.id]},
+      params[:category]), prompt: t("views.admin.words.index.option_all"),
+      class: "form-control" %>
+    <%= submit_tag t("views.admin.words.index.filter_button"),
+      class: "btn btn-primary" %>
   <% end %>
-</ul>
+</div>
+<br>
+<table class="table table-striped manager-users">
+  <thead>
+    <col width="10%">
+    <col width="75%">
+    <col width="15%">
+    <tr>
+      <th><%= t "views.admin.words.index.header_word_id" %></th>
+      <th><%= t "views.admin.words.index.header_word_name" %></th>
+      <th><%= t "views.admin.words.index.header_action" %></th>
+    <tr>
+  </thead>
+  <tbody>
+    <% @words.each do |word| %>
+      <tr>
+        <td class="word-id"><%= word.id %></td>
+        <td class="word-name"><%= word.name %></td>
+        <td class="action">
+          <%= link_to t("views.admin.words.index.edit"),
+            edit_admin_word_path(word), class: "btn btn-warning" %>
+          <%= link_to t("views.admin.words.index.delete"),
+            admin_word_path(word), method: :delete,
+            data: {confirm: t("views.admin.words.index.confirm")},
+            class: "btn btn-danger" %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 <%= will_paginate %>

@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   end
 
   resources :categories, only: :index
+  resources :words, only: :index
 
   namespace :admin do
     resources :users, only: [:index, :destroy]

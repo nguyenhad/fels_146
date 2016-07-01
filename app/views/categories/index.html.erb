@@ -9,6 +9,8 @@
       <%= link_to t("views.categories.index.start_lesson"),
         lessons_path(category_id: category.id),
         method: :post, class: "btn btn-primary pull-right" %>
+      <%= link_to t("views.categories.index.show_word"), words_path(category_id: category.id),
+        class: "btn btn-primary pull-right" %>
     </li>
   <% end %>
 </ul>
